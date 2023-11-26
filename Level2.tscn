@@ -1,7 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://ro1ajb6dxb6"]
+[gd_scene load_steps=3 format=3 uid="uid://ro1ajb6dxb6"]
 
-[ext_resource type="PackedScene" uid="uid://d311507ponw3k" path="res://CityMap.tscn" id="1_js1n1"]
+[ext_resource type="TileSet" uid="uid://bkljknmltdsxd" path="res://OneBitTileset.tres" id="1_vllgg"]
+[ext_resource type="PackedScene" uid="uid://duuu40pf4e0rj" path="res://Player.tscn" id="2_26imm"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource("1_js1n1")]
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_vllgg")
+collision_visibility_mode = 1
+format = 2
+layer_0/tile_data = PackedInt32Array(196606, 131073, 11, 131070, 1, 9, 65534, 131073, 10, -2, 131073, 10, -65538, 131073, 10, -131074, 131073, 10, -196610, 131073, 9, 131071, 65537, 9, 65536, 65537, 9, -65532, 458753, 4, 4, 458753, 5, 65540, 458753, 6, -65531, 524289, 4, 5, 524289, 5, 65541, 524289, 6, -65530, 589825, 4, 6, 589825, 5, 65542, 589825, 6, 65537, 65537, 9, 65538, 65537, 9, 65539, 131073, 9)
+layer_1/name = ""
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(16, 131072, 10, 65552, 131072, 10, 131088, 131072, 10)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_26imm")]
