@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://duuu40pf4e0rj"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_22ysc"]
+[ext_resource type="Texture2D" uid="uid://nnn01k8mb2hb" path="res://kenney_1-bit-platformer-pack/Tiles/Transparent/tile_0241.png" id="2_aqka8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbnfg"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_22ysc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_aqka8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hbnfg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="RayCast2D" type="RayCast2D" parent="Camera2D"]
